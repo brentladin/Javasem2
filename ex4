@@ -1,0 +1,64 @@
+public class pg127ex4p2 {
+       public static final int SIZE = 5; 
+       
+       public static void main(String[] args) {
+       //make the space2 its own method 
+       for (int layer = 1; layer<= SIZE; layer++){
+           Headline(layer); 
+           Bodyline(layer); 
+          Feetline(layer); 
+           
+           
+       }
+       floor();
+       }
+       public static void Headline(int layer){ // where to add int layer
+           for(int spaces=1; spaces <= -5*layer+5*SIZE; spaces++){
+               System.out.print(" "); 
+           }
+       System.out.print("  o  ******"); 
+        for(int spaces2=1; spaces2<=5*layer; spaces2++){
+            System.out.print(" ");
+        }
+        System.out.println("*");
+        }
+           
+    
+        
+       public static void Bodyline(int layer){
+       for (int spaces=1; spaces<=-5*layer+5*SIZE; spaces++){ 
+           System.out.print(" "); 
+       }
+    System.out.print(" /|\\");
+    System.out.print(" *"); 
+    spaces2(layer); 
+    System.out.println("*");
+    }
+
+
+       public static void Feetline(int layer){ 
+        for (int spaces=1; spaces<=-5*layer+5*SIZE; spaces++){ 
+            System.out.print(" "); 
+       }
+      System.out.print(" / \\"); 
+      System.out.print(" *");
+    spaces2(layer); 
+    System.out.println("*");
+    }
+
+
+      public static void spaces2(int layer){ 
+          for(int spaces2=1; spaces2<=5*layer; spaces2++){
+              System.out.print(" "); 
+          }
+       }
+       public static void floor(){
+           for(int k=1; k <=5*SIZE+7; k++){
+           System.out.print("*"); 
+       }
+   System.out.println();
+}
+}
+
+       
+
