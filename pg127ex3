@@ -1,0 +1,63 @@
+public class pg127ex3 {
+   public static final int SIZE = 4; 
+
+ public static void main(String[] args) {
+lines(); 
+top();
+bottom(); 
+lines(); 
+bottom(); 
+top(); 
+lines(); 
+    }
+public static void lines(){
+  System.out.print("+");
+  for(int a=1; a<=2*SIZE+1; a++){
+  System.out.print("-");
+}
+System.out.println("+");
+}
+
+public static void top(){ 
+  for(int line=1; line<=SIZE; line++){
+    System.out.print("|");
+  
+  for(int spaces=1; spaces<=-line+5; spaces++){
+    System.out.print(" ");
+  }
+  for(int forward=1; forward<=line-1; forward++){ 
+    System.out.print("/");
+  }
+  System.out.print("*"); 
+  for(int backward=1; backward<=line-1; backward++){ 
+    System.out.print("\\");
+  }
+  for(int spaces2=1; spaces2<=-line+5; spaces2++){
+    System.out.print(" "); 
+  }
+  System.out.println("|");
+  }
+}
+public static void bottom(){ 
+  for(int line = 1; line <=SIZE+1; line++){
+    System.out.print("|");
+
+    for(int spaces=1; spaces<=line; spaces++){
+        System.out.print(" ");
+}
+for(int backward=1; backward<=-line+4; backward++){ 
+  System.out.print("\\");
+  }
+  System.out.print("*");
+  for(int forward=1; forward<=-1*line+4; forward++){ 
+    System.out.print("/"); 
+
+  }
+  for(int spaces2=1; spaces2<=line; spaces2++){ 
+    System.out.print(" "); 
+  }
+  System.out.println("|"); 
+  }
+}}
+
+
