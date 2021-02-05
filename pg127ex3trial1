@@ -1,0 +1,34 @@
+public class pg127ex3 {
+   public static final int SIZE = 8; 
+
+ public static void main(String[] args) {
+line(); 
+top();
+    }
+public static void line(){
+  System.out.print("+");
+  for(int a=1; a<=SIZE+1; a++){
+  System.out.print("-");
+}
+System.out.println("+");
+}
+public static void top(){ 
+  for(int line=1; line<=SIZE*(1/2);line++){
+    System.out.print("|");
+  }
+  for(int spaces=1; spaces<=-1*line+5; spaces++){
+    System.out.print(" ");
+  }
+for(int slash=1; slash<=line-1;slash++){
+  System.out.print("/");
+}
+System.out.print("*"); 
+for(int back=1; back<=-1*line+5; back++){
+  System.out.print("//"); 
+}
+for(int space2=1; space2<=line; space2++){ 
+  System.out.print(" "); 
+}
+System.out.println("|")
+}
+  }
