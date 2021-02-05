@@ -1,0 +1,101 @@
+public class pg127ex5 {
+  public static final int SIZE = 3; 
+    
+public static void main(String[] args) {
+top(); 
+line(); 
+A(); 
+V(); 
+line(); 
+top(); 
+
+
+
+}
+
+public static void top(){
+for (int line = 1; line<= 2*SIZE-1; line++){
+  for (int j = 1; j <=-line+2*SIZE; j++){
+            System.out.print(" ");
+        }
+for (int slashes = 1; slashes <= line; slashes++){
+    System.out.print("/"); 
+}
+    System.out.print("**");
+  
+  for (int slashes=1; slashes<=line; slashes++){
+    System.out.print("\\"); 
+  
+}
+System.out.println(" ");
+    }
+}
+public static void line(){ 
+	System.out.print("+");
+	for (int i = 1; i <= 2*SIZE; i++){
+		System.out.print("=*");
+	}
+	System.out.println("+");
+}
+public static void A(){ 
+    for (int line= 1; line<= SIZE; line++){
+            System.out.print("|");
+            adots(line);
+        
+				for (int A = 1; A <= line; A++){
+					System.out.print("/\\");
+                }
+            
+           for (int dots= 1; dots <= SIZE-line; dots++){
+             System.out.print("..");
+           }
+        
+        for (int a = 1; a <= line; a++){
+            System.out.print("/\\");
+        }
+        adots(line);
+       
+        System.out.println("|");
+    }}
+        
+    //for (int dots= 1; dots <= line-1; dots++){
+       // System.out.print(".");
+ //   }
+
+
+    public static void V(){ 
+        for (int line= 1; line<= SIZE; line++){
+                System.out.print("|");
+        
+                vdots(line);
+        
+                    for (int v = 1; v <= -line+4; v++){
+                        System.out.print("\\/");
+                    }
+                    for (int dots= 1; dots <= line-1; dots++){
+                        System.out.print("..");
+                }
+                for (int v = 1; v <= -line+4; v++){
+                    System.out.print("\\/");
+                }
+                vdots(line);
+System.out.println("|");
+                  
+            }
+        }
+
+public static void adots(int line){
+    for (int dots = 1; dots <= SIZE-line; dots++){
+        System.out.print(".");
+}
+}
+public static void vdots(int line){ 
+    for (int dots= 1; dots <= line-1; dots++){
+        System.out.print(".");
+}
+}
+        
+}
+
+
+
