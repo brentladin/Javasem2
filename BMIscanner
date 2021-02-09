@@ -1,0 +1,67 @@
+/* Brent Ladin 
+02/08/2021 
+We are using our knowledge of scanners and if else statements to create a BMI scanner with user input
+*/
+
+import java.util.*;
+
+public class BMI_Scanner {
+    public static void main(String [] args){ 
+        Scanner input= new Scanner(System.in);
+        //System.out.print(" Person 1: Please enter your name: ");
+       // System.out.print(" Person 2: Please enter your name: ");
+       
+       System.out.print(" Person 1: Please enter your height: ");
+    double h1= input.nextDouble();
+        
+    System.out.print(" Person 1: Please enter your weight: "); 
+    double w1= input.nextDouble(); 
+   
+    Double BMI1= (w1/(h1*h1))*703; 
+        System.out.println("Person 1's BMI is "+ BMI1+ " lb in "); 
+ BMI1Calc(BMI1);
+
+        System.out.print(" Person 2: Please enter your height: ");
+    double h2= input.nextDouble(); 
+        
+    System.out.print(" Person 2: Please enter your weight: "); 
+    double w2= input.nextDouble();
+        
+    Double BMI2= (w2/(h2*h2))*703; 
+        System.out.print("Person 2's BMI is "+ BMI2+ " lb in "); 
+    BMI2Calc(BMI2);
+
+    System.out.printf("Difference %.3f \n" , Math.abs((BMI1-BMI2))); 
+
+
+    }
+public static void BMI1Calc(double BMI1){ 
+    if( 18.5>BMI1){ 
+        System.out.println("You are underweight. Eat some food!"); 
+    }
+    else if (BMI1 >= 18.5 && BMI1 <= 24.9){ 
+        System.out.println("Congrats! You are normal"); 
+    }
+    else if (BMI1 >= 25){ 
+        System.out.println("Maybe you should avoid doughnuts because you are overweight"); 
+    }
+}
+public static void BMI2Calc(double BMI2){ 
+    if( 18.5>BMI2){ 
+        System.out.println("You are underweight. Eat some food!"); 
+    }
+    else if (BMI2 >= 18.5 && BMI2 <=24.9){ 
+        System.out.println("Congrats! You are normal"); 
+    }
+    else if (BMI2 >= 25){ 
+        System.out.println("Maybe you should avoid doughnuts because you are overweight"); 
+    }
+}
+public static void diff(){ 
+    
+}
+} 
+
+
+
+    
