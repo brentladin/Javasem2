@@ -2,7 +2,7 @@ import java.util.*;
 public class pg299ex14 {
     public static void main(String [] args){ 
         Swappairs("hello there");
-        Quadrant(0,0); 
+        Quadrant(); 
 }
 
 public static String Swappairs(String param){ 
