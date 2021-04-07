@@ -1,0 +1,72 @@
+import java.util.*; 
+/* 
+Write a game of Hangman using arrays. Allow the user to guess letters and 
+represent which letters have been guessed in an array.
+*/ 
+
+//lives: o o o  
+//Input: x 
+//word .ajaj.
+//Not Used: bcde....
+//---------- seperate frames
+
+public class Chapter7proj2 {
+
+    public static void main(String [] args) {
+        Scanner input= new Scanner(System.in);    
+        Random r= new Random(); 
+    
+         
+System.out.println("Starting game..."); 
+String[] words= new String[] {"happy", "animal", "rodent", "apple"}; 
+String randomWord= words[r.nextInt(words.length)]; //number between 0 and 3 
+
+System.out.println("The word has: "+randomWord.length()+ " letters"); 
+char[] letters= new char[randomWord.length()]; 
+
+for(int i=0; i<letters.length;i++){ 
+    letters[i]='_'; //prints the letters that you have guessed and a .. when you don't have word right
+}
+System.out.println(Arrays.toString(letters));
+ 
+int numlives=letters.length;  
+int count=0; 
+int totalletters=0; 
+while (numlives>0 && totalletters!=letters.length){ 
+    System.out.println("Lives remaining: "+numlives); 
+
+System.out.println("Input letter: ");
+String temp = input.next(); 
+char letter = temp.charAt(0); //you have to make it a string first
+
+for(int i=0; i <randomWord.length(); i++){ 
+    if( letter== randomWord.charAt(i)){ 
+        letters[i]=letter; //letter is going to be replaced
+        count++; 
+        totalletters++; 
+
+    }
+}
+if(count==0){ 
+    numlives--; 
+
+}
+else{ 
+    count=0; 
+    
+}
+
+System.out.println(Arrays.toString(letters));
+}
+
+if(totalletters==letters.length){ 
+    System.out.println("You guessed it! "); 
+
+}
+else{ 
+    System.out.println("You lost "); 
+}
+    }
+}
+
+
