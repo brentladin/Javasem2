@@ -1,0 +1,83 @@
+Projectpuesdo.txt 
+Main- 
+Scanner input= new Scanner(System.in); 
+/("Welcome to Brent's Bank)- with design from code
+openAccount(){ 
+}
+("Now that you have an account, what would you like to do?: )
+("1) Deposits  "); 
+(" 2)Withdraws "); 
+("3) Investments  "); 
+(" 4) Close account  "); 
+("6) Exit  "); 
+
+while(selection != 6){ 
+   
+   if selection =1{ 
+     deposits()
+    }  
+    if selection =2{ 
+           withdraws()
+       } 
+      if  selection= 3 { 
+investments()
+       }
+   if selection= 4{ 
+           closeAccount()
+       }
+       if selection =5 
+       exitBank()
+}
+       while(selection < 1 || selection > 5){ 
+    System.out.println("Please enter a valid selection: ");
+	selection = input.nextInt();
+}
+
+    }
+  openAccount(){ 
+use random generator to give the user an account number 
+store the account number in the file 
+  } 
+  Deposits(double balance){ 
+      ("Please enter the amount you would like to deposit)
+      double depositAmt= input.nextDouble(); 
+      balance+= depositAmt; 
+      (" You now have $" +depositAmt" in your account)
+  }
+  
+  Withdraws(double balance, double withdrawAmt){ 
+
+System.out.print(" Enter amount you would like to withdraw: ");
+double withdrawAmt= input.nextDouble(); 
+if( withdrawAmt<balance){ 
+balance-=withdrawAmt; 
+System.out.println("After withdrawing $"+ withdrawAmt" from your account, you know have a total balance of: $"+balance"); 
+}
+
+Investments(double balance, int selection){ 
+(" Enter amount you would like to invest: ");
+double investmentAmt= input.nextDouble(); 
+
+if( investmentAmt<balance){  
+    ("Would you like a rough estimate on how your investment will do?: 1) yes 2)No thanks )
+    int sel= input.nextInt(); 
+    if( sel==1 ){ 
+        ("Given that we are going to invest your money into the S&P 500, we can assume an average rate of return of roughly 9% annually)
+("How many years would you like to invest?")
+int sel2= input.nextInt(); 
+for( int i=1; i<sel2; i++){
+    investmentSum= balance*(1+.09/1)^sel2; 
+    ("After year:"+i" your total money with investments with be roughly"+investmentSum); 
+}
+    }
+}
+  }
+closeAcc(){ 
+    ("Thank you for coming to Brent's bank. We appreciate your service); 
+    (" it is part of our policy that all your information will be erased from our files)
+    delete user file 
+}
+exitBank(){ 
+    (Thank you for choosing Brent's Bank, we hope to see you again)
+}
+  }  
